@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   home.username = "lord2ve";
@@ -26,5 +26,15 @@
   programs.gh = {
     enable = true;
     settings.git_protocol = "https";
+  };
+
+  # Keyboard layouts: English + Arabic (switch with Super+Space)
+  dconf.settings = {
+    "org/gnome/desktop/input-sources" = {
+      sources = [
+        (lib.hm.gvariant.mkTuple [ "xkb" "us" ])
+        (lib.hm.gvariant.mkTuple [ "xkb" "ara" ])
+      ];
+    };
   };
 }
