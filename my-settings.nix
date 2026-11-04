@@ -7,6 +7,11 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   zramSwap.enable = true;
 
+  # Retry stalled downloads automatically instead of hanging
+  nix.settings.connect-timeout = 10;
+  nix.settings.stalled-download-timeout = 30;
+  nix.settings.download-attempts = 5;
+
   environment.systemPackages = with pkgs; [
     git
     vim
