@@ -46,6 +46,7 @@
 
   # Tailscale
   services.tailscale.enable = true;
+  networking.firewall.trustedInterfaces = [ "tailscale0" ];
 
   # Sunshine (screen streaming), started manually when needed
   services.sunshine = {
