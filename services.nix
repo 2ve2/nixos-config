@@ -44,6 +44,9 @@
   # Flatpak
   services.flatpak.enable = true;
 
+  # LocalSend (opens its port in the firewall)
+  programs.localsend.enable = true;
+
   # Tailscale
   services.tailscale.enable = true;
   networking.firewall.trustedInterfaces = [ "tailscale0" ];
