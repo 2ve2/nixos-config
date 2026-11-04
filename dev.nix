@@ -6,6 +6,7 @@
     nodejs
     bun
     pnpm
+    yarn-berry
     python3
     lazydocker
     nixd
