@@ -5,7 +5,7 @@
   home.homeDirectory = "/home/lord2ve";
   home.stateVersion = "26.05";
 
-  imports = [ ./terminal.nix ./dev.nix ./apps.nix ./ai.nix ];
+  imports = [ ./terminal.nix ./dev.nix ./apps.nix ./ai.nix ./chrome-devtools ];
 
   programs.bash = {
     enable = true;
