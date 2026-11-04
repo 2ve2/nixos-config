@@ -5,6 +5,8 @@
   home.homeDirectory = "/home/lord2ve";
   home.stateVersion = "26.05";
 
+  imports = [ ./terminal.nix ];
+
   programs.bash = {
     enable = true;
     shellAliases = {
