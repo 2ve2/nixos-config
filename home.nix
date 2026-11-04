@@ -28,13 +28,30 @@
     settings.git_protocol = "https";
   };
 
-  # Keyboard layouts: English + Arabic (switch with Super+Space)
+  # GNOME Tweaks and the AppIndicator extension (tray icons)
+  home.packages = with pkgs; [
+    gnome-tweaks
+    gnomeExtensions.appindicator
+  ];
+
   dconf.settings = {
+    # Keyboard layouts: English + Arabic (switch with Super+Space)
     "org/gnome/desktop/input-sources" = {
       sources = [
         (lib.hm.gvariant.mkTuple [ "xkb" "us" ])
         (lib.hm.gvariant.mkTuple [ "xkb" "ara" ])
       ];
+    };
+
+    # Enable the AppIndicator extension
+    "org/gnome/shell" = {
+      disable-user-extensions = false;
+      enabled-extensions = [ pkgs.gnomeExtensions.appindicator.extensionUuid ];
+    };
+
+    # Use JetBrains Mono (with icons) in the terminal and code views
+    "org/gnome/desktop/interface" = {
+      monospace-font-name = "JetBrainsMono Nerd Font 11";
     };
   };
 }
