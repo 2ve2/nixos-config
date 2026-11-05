@@ -24,6 +24,7 @@
     ./agent-reach.nix
     ./our-free-model.nix
     ./open-design.nix
+    ./voice
   ];
 
   programs.bash = {

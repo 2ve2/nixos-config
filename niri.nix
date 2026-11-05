@@ -1,6 +1,7 @@
 # Configure the Niri desktop, input layouts, shell startup, and window controls.
 
 {
+  aiPackages,
   config,
   lib,
   pkgs,
@@ -15,6 +16,7 @@ let
   };
   ghostty = lib.getExe pkgs.ghostty;
   noctalia = lib.getExe pkgs.noctalia;
+  voiceAction = lib.getExe (import ./voice/action.nix { inherit aiPackages pkgs; });
   noctaliaStartup = pkgs.writeShellApplication {
     name = "noctalia-audio-startup";
     runtimeInputs = [ (import ./audio-ready.nix { inherit pkgs; }) ];
@@ -104,6 +106,10 @@ in
       Mod+Space { spawn "${noctalia}" "msg" "panel-toggle" "launcher"; }
       Mod+V { spawn "${noctalia}" "msg" "panel-toggle" "clipboard"; }
       Mod+S { spawn "${noctalia}" "msg" "panel-toggle" "control-center"; }
+      Mod+D repeat=false { spawn "${voiceAction}" "dictation-toggle"; }
+      Mod+X repeat=false { spawn "${voiceAction}"; }
+      Mod+Shift+X repeat=false { spawn "${voiceAction}" "reset"; }
+      Mod+Shift+Escape repeat=false { spawn "${voiceAction}" "cancel"; }
       Mod+Shift+Comma { spawn "${noctalia}" "msg" "settings-toggle"; }
       Alt+Tab { spawn "${noctalia}" "msg" "window-switcher"; }
       Mod+Home { spawn "${noctalia}" "msg" "session" "lock"; }
