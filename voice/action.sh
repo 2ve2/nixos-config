@@ -276,7 +276,7 @@ printf 'submitted\n' >"$job/phase"
   # wrapper's lifetime. Close it for Pi so spawned apps cannot prolong busy.
   pi_status=0
   timeout 120s pi \
-    --model codex-lb/gpt-6-luna \
+    --model codex-lb/gpt-5.6-luna \
     --thinking low \
     --session "$session_store/$voice_session_id.jsonl" \
     --no-context-files \

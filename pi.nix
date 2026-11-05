@@ -5,6 +5,6 @@ _: {
   # yzua passes this through flake.nix; same value here.
   _module.args.setup.pi.webSearch = {
     provider = "codex-lb";
-    model = "gpt-6.1-sol";
+    model = "gpt-5.6-sol";
   };
 }
