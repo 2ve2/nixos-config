@@ -21,6 +21,8 @@
     ./niri.nix
     ./noctalia.nix
     ./ghostty-colors.nix
+    ./agent-reach.nix
+    ./our-free-model.nix
   ];
 
   programs.bash = {
