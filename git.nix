@@ -10,7 +10,7 @@ let
   gitIdentity = {
     name = "2ve2";
     email = "81648139+2ve2@users.noreply.github.com";
-    githubEmail = "GITHUB_NOREPLY_EMAIL";
+    githubEmail = "81648139+2ve2@users.noreply.github.com";
     signingKey = "/home/lord2ve/.ssh/id_ed25519.pub";
   };
 in
