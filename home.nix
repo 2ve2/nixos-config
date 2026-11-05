@@ -27,6 +27,7 @@
     ./voice
     ./pi.nix
     ./codex-lb.nix
+    ./brave.nix
   ];
 
   programs.bash = {
