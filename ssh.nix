@@ -1,4 +1,4 @@
-{ ... }:
+_:
 
 {
   # Keep remote administration available after the temporary bootstrap exits.

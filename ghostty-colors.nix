@@ -1,4 +1,4 @@
-{ ... }:
+_:
 
 {
   # Midnight Ink colors for Ghostty, matching Niri and Noctalia.

@@ -58,7 +58,10 @@ in
     name = "Firefox (Work)";
     exec = "firefox -P Work";
     icon = "firefox";
-    categories = [ "Network" "WebBrowser" ];
+    categories = [
+      "Network"
+      "WebBrowser"
+    ];
   };
 
   # Open web links with Firefox

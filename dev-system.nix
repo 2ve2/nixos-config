@@ -1,4 +1,4 @@
-{ ... }:
+_:
 
 {
   # Docker, with permission to use it without sudo

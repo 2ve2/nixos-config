@@ -2,23 +2,23 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./my-settings.nix
-      ./niri-system.nix
-      ./ssh.nix
-      ./ai-system.nix
-      ./dev-system.nix
-      ./desktop.nix
-      ./services.nix
-      ./gaming.nix
-      ./services.nix
-      ./gaming.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./my-settings.nix
+    ./niri-system.nix
+    ./ssh.nix
+    ./ai-system.nix
+    ./dev-system.nix
+    ./desktop.nix
+    ./services.nix
+    ./gaming.nix
+    ./services.nix
+    ./gaming.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -84,9 +84,12 @@
   users.users."lord2ve" = {
     isNormalUser = true;
     description = "Abdulrahman Matouk";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 

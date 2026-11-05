@@ -12,6 +12,9 @@
     nixd
     nixfmt
     biome
+    nvd
+    statix
+    deadnix
   ];
 
   # VS Code with extensions installed from Nix

@@ -1,10 +1,13 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
 
   boot.loader.systemd-boot.configurationLimit = 10;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   zramSwap.enable = true;
 
   # Retry stalled downloads automatically instead of hanging
@@ -28,7 +31,7 @@
     prime = {
       offload.enable = true;
       offload.enableOffloadCmd = true;
-      intelBusId  = "PCI:0:2:0";
+      intelBusId = "PCI:0:2:0";
       nvidiaBusId = "PCI:1:0:0";
     };
   };

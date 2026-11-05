@@ -12,9 +12,18 @@
 
   # Fallback order so Arabic text and emoji always render properly
   fonts.fontconfig.defaultFonts = {
-    sansSerif = [ "Noto Sans" "Noto Sans Arabic" ];
-    serif = [ "Noto Serif" "Amiri" ];
-    monospace = [ "JetBrains Mono" "Noto Sans Mono" ];
+    sansSerif = [
+      "Noto Sans"
+      "Noto Sans Arabic"
+    ];
+    serif = [
+      "Noto Serif"
+      "Amiri"
+    ];
+    monospace = [
+      "JetBrains Mono"
+      "Noto Sans Mono"
+    ];
     emoji = [ "Noto Color Emoji" ];
   };
 

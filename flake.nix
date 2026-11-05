@@ -14,21 +14,28 @@
     llm-agents.url = "github:numtide/llm-agents.nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, llm-agents, ... }: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      modules = [
-        ./configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.backupFileExtension = "backup";
-          home-manager.extraSpecialArgs = {
-            aiPackages = llm-agents.packages.x86_64-linux;
-          };
-          home-manager.users.lord2ve = import ./home.nix;
-        }
-      ];
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      llm-agents,
+      ...
+    }:
+    {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        modules = [
+          ./configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+            home-manager.extraSpecialArgs = {
+              aiPackages = llm-agents.packages.x86_64-linux;
+            };
+            home-manager.users.lord2ve = import ./home.nix;
+          }
+        ];
+      };
     };
-  };
 }
