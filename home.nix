@@ -5,7 +5,7 @@
   home.homeDirectory = "/home/lord2ve";
   home.stateVersion = "26.05";
 
-  imports = [ ./terminal.nix ./dev.nix ./apps.nix ./ai.nix ./chrome-devtools ];
+  imports = [ ./terminal.nix ./dev.nix ./apps.nix ./ai.nix ./chrome-devtools ./git.nix ];
 
   programs.bash = {
     enable = true;
@@ -16,14 +16,6 @@
     };
   };
 
-  programs.git = {
-    enable = true;
-    settings = {
-      user.name = "2ve2";
-      user.email = "bdalrhmnmtwq53@gmail.com";
-      init.defaultBranch = "main";
-    };
-  };
 
   programs.gh = {
     enable = true;
