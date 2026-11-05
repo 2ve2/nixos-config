@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./my-settings.nix
+      ./niri-system.nix
       ./ssh.nix
       ./ai-system.nix
       ./dev-system.nix
