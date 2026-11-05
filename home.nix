@@ -25,6 +25,7 @@
     ./our-free-model.nix
     ./open-design.nix
     ./voice
+    ./pi.nix
   ];
 
   programs.bash = {
@@ -33,6 +34,7 @@
       rebuild = "nixos-rebuild switch --sudo --flake /home/lord2ve/nixos-config#nixos";
       update = "nix flake update --flake /home/lord2ve/nixos-config";
       nixconf = "cd /home/lord2ve/nixos-config";
+      p = "pi --approve";
     };
   };
 
