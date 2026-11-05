@@ -11,6 +11,7 @@
     lazydocker
     nixd
     nixfmt
+    biome
   ];
 
   # VS Code with extensions installed from Nix
