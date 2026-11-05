@@ -23,6 +23,7 @@
     ./ghostty-colors.nix
     ./agent-reach.nix
     ./our-free-model.nix
+    ./open-design.nix
   ];
 
   programs.bash = {
