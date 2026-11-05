@@ -169,6 +169,8 @@ in
       ExecStart = toString voxtypeDaemon;
       Restart = "on-failure";
       RestartSec = 5;
+      # Use the NVIDIA GPU (Vulkan device 1), not the Intel iGPU.
+      Environment = "GGML_VK_VISIBLE_DEVICES=1";
     };
     Install.WantedBy = [ "graphical-session.target" ];
   };
