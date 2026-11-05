@@ -75,7 +75,6 @@ in
   };
 
   # Microphone and speaker effects, running in the background
-  services.easyeffects.enable = true;
 
   home.packages = with pkgs; [
     google-chrome
