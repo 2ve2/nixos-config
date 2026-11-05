@@ -26,6 +26,7 @@
     ./open-design.nix
     ./voice
     ./pi.nix
+    ./codex-lb.nix
   ];
 
   programs.bash = {
