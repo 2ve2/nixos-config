@@ -29,6 +29,8 @@
     ./codex-lb.nix
     ./brave.nix
     ./zsh.nix
+    ./terminal-extras.nix
+    ./skills.nix
   ];
 
   programs.bash = {
