@@ -32,6 +32,7 @@ in
   xdg.configFile."niri/config.kdl".text = ''
     input {
       keyboard {
+        track-layout "window"
         xkb {
           layout "us,ara"
           options "grp:caps_toggle"
