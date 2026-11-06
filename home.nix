@@ -28,6 +28,7 @@
     ./pi.nix
     ./codex-lb.nix
     ./brave.nix
+    ./zsh.nix
   ];
 
   programs.bash = {

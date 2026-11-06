@@ -16,8 +16,7 @@
     ./desktop.nix
     ./services.nix
     ./gaming.nix
-    ./services.nix
-    ./gaming.nix
+    ./zsh-system.nix
   ];
 
   # Use the systemd-boot EFI boot loader.

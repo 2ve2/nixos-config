@@ -17,5 +17,6 @@
     vesktop
     sqlitebrowser
     postman
+    obs-studio
   ];
 }
