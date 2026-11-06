@@ -9,7 +9,13 @@
     pkgs.ast-grep
     pkgs.imagemagick
     pkgs.microfetch
+    pkgs.openssl
+    pkgs.mitmproxy
+    pkgs.wireshark-cli
   ];
+
+  # Opt out of gh usage telemetry; extensions have separate settings.
+  home.sessionVariables.GH_TELEMETRY = "false";
 
   programs.bash.shellAliases = {
     ".." = "cd ..";

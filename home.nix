@@ -31,6 +31,7 @@
     ./zsh.nix
     ./vscode-settings.nix
     ./terminal-extras.nix
+    ./starship.nix
     ./skills.nix
   ];
 
