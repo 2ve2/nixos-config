@@ -3,6 +3,7 @@
 {
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.android_sdk.accept_license = true;
+  programs.nix-ld.enable = true;
 
   boot.loader.systemd-boot.configurationLimit = 10;
   nix.settings.experimental-features = [

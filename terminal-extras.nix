@@ -7,6 +7,8 @@
     pkgs.htmlq
     pkgs.sd
     pkgs.ast-grep
+    pkgs.imagemagick
+    pkgs.microfetch
   ];
 
   programs.bash.shellAliases = {
