@@ -1,13 +1,12 @@
-# Zsh setup from yzua; aliases are shared with Bash.
+# Zsh setup; aliases are shared with Bash.
 { config, lib, ... }:
 {
   programs.zsh = {
     enable = true;
-    # Same aliases as Bash (rebuild, update, nixconf, p).
     shellAliases = config.programs.bash.shellAliases;
     autosuggestion = {
       enable = true;
-      # Midnight Ink base03 (yzua takes it from stylix).
+      # Midnight Ink base03.
       highlight = "fg=#808080";
     };
     syntaxHighlighting.enable = true;

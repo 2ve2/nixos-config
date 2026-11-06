@@ -1,4 +1,4 @@
-# Zsh as the login shell (from yzua's host config).
+# Zsh as the login shell.
 { pkgs, ... }:
 {
   programs.zsh.enable = true;

@@ -29,6 +29,7 @@
     ./codex-lb.nix
     ./brave.nix
     ./zsh.nix
+    ./vscode-settings.nix
     ./terminal-extras.nix
     ./skills.nix
   ];

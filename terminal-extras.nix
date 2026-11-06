@@ -1,4 +1,4 @@
-# Extra CLI tools and shell shortcuts from yzua; Zsh reuses these Bash aliases.
+# Extra CLI tools and shell shortcuts; Zsh reuses these Bash aliases.
 { pkgs, ... }:
 {
   home.packages = [

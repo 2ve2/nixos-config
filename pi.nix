@@ -1,22 +1,18 @@
-# Pi base, coding and RE profiles from yzua; pi-home is not installed.
+# Pi base, coding and RE profiles; pi-home is not installed.
 { pkgs, ... }:
 let
-  # yzua passes these through flake.nix; same values except where noted.
   setup = {
     pi = {
       webSearch = {
         provider = "codex-lb";
-        # Codex-LB model available on this account (yzua: gpt-6.1-sol).
         model = "gpt-5.6-sol";
       };
-      # yzua's laptop value (his desktop uses 4).
       research = {
         maxConcurrent = 2;
         defaultTimeoutSeconds = 600;
         maxTimeoutSeconds = 1800;
       };
     };
-    # yzua's desktop emulator size.
     androidLab = {
       acceptLicense = true;
       apiLevel = "35";
