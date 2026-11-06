@@ -30,6 +30,7 @@
     ./brave.nix
     ./zsh.nix
     ./vscode-settings.nix
+    ./vscode-keyring.nix
     ./terminal-extras.nix
     ./starship.nix
     ./skills.nix
