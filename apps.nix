@@ -18,5 +18,6 @@
     sqlitebrowser
     postman
     obs-studio
+    blender
   ];
 }
