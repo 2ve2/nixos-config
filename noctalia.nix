@@ -111,6 +111,7 @@ in
         }
       ];
       end = [
+        "keyboard_layout"
         "tray"
         "notifications"
         "network"
