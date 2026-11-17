@@ -77,6 +77,10 @@
     # jack.enable = true;
   };
 
+  # Enable the Location service
+  services.geoclue2.enable = true;
+  location.provider = "geoclue2";
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 

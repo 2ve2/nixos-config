@@ -4,6 +4,18 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.android_sdk.accept_license = true;
   programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc.lib
+    zlib
+    zstd
+    openssl
+    curl
+    glib
+    libxml2
+    libxslt
+    icu
+  ];
+
 
   boot.loader.systemd-boot.configurationLimit = 10;
   nix.settings.experimental-features = [

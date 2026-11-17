@@ -42,6 +42,7 @@ in
     chatgpt
     antigravity-cli
     t3code-desktop
+    zcode
   ];
 
   home.file.".codex/AGENTS.md".source = ./agent-instructions.md;
